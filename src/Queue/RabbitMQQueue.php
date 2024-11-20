@@ -604,7 +604,6 @@ class RabbitMQQueue extends Queue implements QueueContract
             'x-dead-letter-exchange' => $this->getExchange() ?? '',
             'x-dead-letter-routing-key' => $this->getRoutingKey($destination),
             'x-message-ttl' => $ttl,
-            'x-expires' => $ttl * 2,
         ];
     }
 
